@@ -22,11 +22,3 @@ app.listen(port, () => {
 })
 
 // https://github.com/mudeideideia/japaneseapi
-
-echo "# japanseapi" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/mudeideideia/japanseapi.git
-git push -u origin main
