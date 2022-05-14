@@ -22,7 +22,6 @@ app.get('/song/:song_name', function (req, res) {
 });
 
 app.post('/song/', function (req, res) {
-  console.log();
   character_json = text_handler.FilterUniqueCharacters(req?.body?.text)
   character_json = text_handler.RemoveCharacters(character_json, japanese.IsHiragana)
   character_json = text_handler.RemoveCharacters(character_json, japanese.IsKatakana)
