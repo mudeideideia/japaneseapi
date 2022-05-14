@@ -1,0 +1,28 @@
+.letter-space {
+    font-family: "Lato";
+    color: aliceblue;
+}
+
+body {
+    background: #000;
+}
+
+.N5 {
+    color: tomato;
+}
+
+.N4 {
+    color: purple;
+}
+
+.N3 {
+    color: darkgreen;
+}
+
+.N2 {
+    color: darkgoldenrod;
+}
+
+.N1 {
+    color: royalblue;
+}

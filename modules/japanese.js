@@ -2,6 +2,8 @@ const japanese = {}
 japanese.ocidental = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",
 "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 
+japanese.symbols = [ "{", "}", "(", ")", "<",">"]
+
 japanese.hiragana = [
 	"あ", "い", "う", "え", "お",
 	"か", "き", "く", "け", "こ",
@@ -51,6 +53,7 @@ japanese.katakana =
 japanese.IsHiragana = (character) => japanese.hiragana.includes(character)
 japanese.IsKatakana = (character) => japanese.katakana.includes(character)
 japanese.IsOcidental = (character) => japanese.ocidental.includes(character)
+japanese.IsSymbol = (character) => japanese.symbols.includes(character)
 module.exports = japanese
 
 
