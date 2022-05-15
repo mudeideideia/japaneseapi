@@ -1,28 +1,41 @@
+
+body {
+    background: #000;
+    display: flex;
+    flex-direction: row;
+}
+
 .lyrics-space {
     font-family: "Lato";
     color: aliceblue;
 }
 
-body {
-    background: #000;
+.menu{
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
 }
 
-.N5 {
+.grade {
+    padding: 10px;
+}
+
+.N5.on {
     color: tomato;
 }
 
-.N4 {
+.N4.on {
     color: purple;
 }
 
-.N3 {
+.N3.on {
     color: darkgreen;
 }
 
-.N2 {
+.N2.on {
     color: darkgoldenrod;
 }
 
-.N1 {
+.N1.on {
     color: royalblue;
 }
