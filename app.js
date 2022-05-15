@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser')
+const cors = require('cors')
 const port = 3000
 
 const db = require('./database/database');
@@ -11,10 +12,11 @@ const text_handler = require('./modules/text_handler');
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(cors('*'));
 
-app.get('/',(req,res)=>{
-  res.sendFile('/www/index.html', { root: __dirname})
-})
+// app.get('/',(req,res)=>{
+//   res.sendFile('/www/index.html', { root: __dirname})
+// })
 
 app.get('/song/:song_name', function (req, res) {
   const song = songs[req?.params?.song_name] || songs.kamen_rider

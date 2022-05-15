@@ -1,23 +1,25 @@
+const url = 'http://10.0.0.169:3000'
+const lyrics_space = document.getElementById("lyrics-space")
 
-fetch('/song/default')
+fetch(url+'/song/default')
 .then( response => response.json())
 .then( json => {
-    document.getElementById("div-element").innerHTML = json.text.replace(/\n/g,'<br>')
+    lyrics_space.innerHTML = json.text.replace(/\n/g,'<br>')
 }).then(() => {
-    fetch("/song/", {
+    fetch(url+"/song/", {
         method: 'POST',
         headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
         },
-        body: `{"text": "${document.getElementById("div-element").innerHTML}"}`,
+        body: `{"text": "${lyrics_space.innerHTML}"}`,
     })
     .then(response => response.json())
     .then(json => {
-        let text = document.getElementById("div-element").innerHTML
+        let text = lyrics_space.innerHTML
         Object.keys(json).forEach((key) => {
             text = text.replace(RegExp(`${key}`,'g'),`<span class=N${json[key]?.grade}>${key}</span>`)
         })
-        document.getElementById("div-element").innerHTML = text
+        lyrics_space.innerHTML = text
     })
 });
