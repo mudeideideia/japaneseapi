@@ -1,5 +1,5 @@
-// const url = 'http://10.0.0.169:3000'
-const url = 'http://192.168.0.241:3000'
+const url = 'http://10.0.0.169:3000'
+// const url = 'http://192.168.0.241:3000'
 
 const lyrics_space = document.getElementById("lyrics-space")
 

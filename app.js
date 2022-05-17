@@ -41,6 +41,10 @@ app.get('/process/:song_name', function (req, res) {
   character_json = db.SearchGrade(character_json, (json) => res.json(json))  
 });
 
+app.get('/vocab/',function (req, res) {
+  db.SearchVocab(songs.kamen_rider, (json)=> res.json(json))
+})
+
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
