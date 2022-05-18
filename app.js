@@ -29,7 +29,11 @@ app.post('/song/', function (req, res) {
   character_json = text_handler.RemoveCharacters(character_json, japanese.IsKatakana)
   character_json = text_handler.RemoveCharacters(character_json, japanese.IsOcidental)
   character_json = text_handler.RemoveCharacters(character_json, japanese.IsSymbol)
-  character_json = db.SearchGrade(character_json, (json) => res.json(json))  
+  character_json = db.SearchGrade(character_json, (grade_list) => {
+    db.SearchVocab(songs.kamen_rider, (vocab_list)=> {
+      res.json({ vocab:vocab_list, grade:grade_list})
+    })
+  })  
 });
 
 app.get('/process/:song_name', function (req, res) {

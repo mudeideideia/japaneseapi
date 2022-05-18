@@ -12,13 +12,18 @@
     <title>Kanji Identifier</title>
 </head>
 <body>
-    <div id="lyrics-space" class="lyrics-space" contentEditable="true">Cole a letra em japonês aqui...</div>
+    <!-- <div id="lyrics-space" class="lyrics-space" contentEditable="true">Cole a letra em japonês aqui...</div> -->
+    <div id="lyrics-space" class="lyrics-space"></div>
     <div class="menu">
         <button class="grade N5" onclick="ToggleClass('N5')">N5</button>    
         <button class="grade N4" onclick="ToggleClass('N4')">N4</button>    
         <button class="grade N3" onclick="ToggleClass('N3')">N3</button>    
         <button class="grade N2" onclick="ToggleClass('N2')">N2</button>    
-        <button class="grade N1" onclick="ToggleClass('N1')">N1</button>        
+        <button class="grade N1" onclick="ToggleClass('N1')">N1</button>
+        <div>
+            <span class="lyrics-space" id="hiragana"></span><br>
+            <span class="lyrics-space" id="portuguese"></span>
+        </div>    
     </div>
     <script src="index.js"></script>
 </body>

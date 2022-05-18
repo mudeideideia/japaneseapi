@@ -6,7 +6,7 @@ body {
     flex-direction: row;
 }
 
-.lyrics-space {
+.lyrics-space, span {
     font-family: "Lato";
     color: aliceblue;
 }
@@ -15,6 +15,7 @@ body {
     display: flex;
     flex-direction: column;
     overflow: auto;
+    width: 70px;
 }
 
 .grade {
@@ -45,4 +46,8 @@ body {
 
 .N1.on {
     color: royalblue;
+}
+.vocab{
+    text-decoration: underline;
+    text-decoration-color: chartreuse;
 }
